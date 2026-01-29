@@ -1,0 +1,12 @@
+p {
+  // background-color: red;
+  color: white;
+}
+.container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+//   padding-top: 20px;
+}
