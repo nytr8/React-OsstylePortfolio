@@ -3,7 +3,8 @@ import Window from "./Window";
 import "./github.scss";
 import Card from "./Card";
 
-const Github = () => {
+const Github = ({ appName, closeApp }) => {
+  // console.log(setActiveApp);
   const myProject = [
     {
       title: "productivity dashboard",
@@ -14,11 +15,9 @@ const Github = () => {
     },
   ];
   return (
-    <Window>
+    <Window appName={appName} closeApp={closeApp}>
       <div className="container">
         <Card project={myProject[0]} />
-        {/* <Card project={myProject[1]} />
-        <Card project={myProject[2]} /> */}
       </div>
     </Window>
   );

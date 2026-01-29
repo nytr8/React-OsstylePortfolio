@@ -4,7 +4,7 @@ import Markdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./node.scss";
-const Notes = () => {
+const Notes = ({ appName, closeApp }) => {
   const [notes, setnotes] = useState(null);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Notes = () => {
   }, []);
 
   return (
-    <Window>
+    <Window appName={appName} closeApp={closeApp}>
       <div className="node-window">
         {notes ? (
           <SyntaxHighlighter language="typescript" style={atelierDuneDark}>

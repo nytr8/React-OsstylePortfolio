@@ -2,14 +2,20 @@ import React, { Children } from "react";
 import { Rnd } from "react-rnd";
 import "./window.scss";
 
-const Window = ({ children }) => {
+const Window = ({
+  children,
+  width = "40vw",
+  height = "50vh",
+  appName,
+  closeApp,
+}) => {
   return (
     <Rnd
       default={{
         x: 500,
         y: 200,
-        width: 800,
-        height: 550,
+        width: width,
+        height: height,
       }}
     >
       <div className="top">
@@ -19,7 +25,11 @@ const Window = ({ children }) => {
         <div>
           <i className="copy ri-file-copy-line"></i>
         </div>
-        <div>
+        <div className="cancel"
+          onClick={() => {
+            closeApp(appName);
+          }}
+        >
           <i className="cross ri-close-line"></i>
         </div>
       </div>
