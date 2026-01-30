@@ -1,39 +1,51 @@
-import React, { Children } from "react";
+import React from "react";
 import { Rnd } from "react-rnd";
 import "./window.scss";
 
 const Window = ({
   children,
-  width = "40vw",
-  height = "50vh",
+  width = "500px",
+  height = "400px",
   appName,
   closeApp,
 }) => {
   return (
     <Rnd
       default={{
-        x: 500,
-        y: 200,
+        x: 100,
+        y: 100,
         width: width,
         height: height,
       }}
+      minWidth={300}
+      minHeight={200}
+      bounds="window"
+      className="brutal-window-wrapper"
     >
-      <div className="top">
-        <div>
-          <p className="dash">-</p>
+      <div className="window-inner">
+        {/* HEADER BAR */}
+        <div className="window-header">
+          <div className="title">{appName.toUpperCase()}</div>
+
+          <div className="controls">
+            <button className="ctrl-btn">
+              <span className="dash">-</span>
+            </button>
+            <button className="ctrl-btn">
+              <i className="ri-file-copy-line"></i>
+            </button>
+            <button
+              className="ctrl-btn close"
+              onClick={() => closeApp(appName)}
+            >
+              <i className="ri-close-line"></i>
+            </button>
+          </div>
         </div>
-        <div>
-          <i className="copy ri-file-copy-line"></i>
-        </div>
-        <div className="cancel"
-          onClick={() => {
-            closeApp(appName);
-          }}
-        >
-          <i className="cross ri-close-line"></i>
-        </div>
+
+        {/* CONTENT AREA */}
+        <div className="window-content">{children}</div>
       </div>
-      <div className="bot">{children}</div>
     </Rnd>
   );
 };
