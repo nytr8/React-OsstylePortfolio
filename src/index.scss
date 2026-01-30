@@ -2,7 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 html,
@@ -301,4 +312,5 @@ main {
   background-blend-mode: overlay, normal, normal, normal, normal, normal;
   will-change: transform, opacity;
   contain: paint;
+  // background-color: #ff9e3d0b;
 }

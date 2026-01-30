@@ -1,83 +1,89 @@
-$black: #000000;
-$white: #ffffff;
+// Glass Variables
+$glass-bg: rgba(255, 255, 255, 0.08);
+$glass-border: rgba(255, 255, 255, 0.15);
+$glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+$header-bg: rgba(255, 255, 255, 0.1);
 $accent-green: #00ff41;
 $accent-red: #ff3e3e;
-$brutal-shadow: 8px 8px 0px 0px $black;
 
 .brutal-window-wrapper {
-  // Ensure the Rnd container doesn't clip the shadow
-  filter: drop-shadow(0px 0px 0px transparent);
+  // Keeping your class name for compatibility
+  filter: none; // No longer need the drop-shadow hack for brutalist shadows
 
   .window-inner {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: $white;
-    border: 4px solid $black;
-    box-shadow: $brutal-shadow;
+    background: $glass-bg;
+    backdrop-filter: blur(15px); // The frosting
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid $glass-border;
+    box-shadow: $glass-shadow;
+    border-radius: 16px; // Soft rounded corners
     overflow: hidden;
   }
 
   .window-header {
-    background: $black;
-    color: $white;
-    height: 40px;
+    background: $header-bg;
+    border-bottom: 1px solid $glass-border;
+    color: rgba(255, 255, 255, 0.9);
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5px 0 15px;
+    padding: 0 15px;
     cursor: grab;
     user-select: none;
 
-    &:active {
-      cursor: grabbing;
-    }
-
     .title {
-      font-family: "Courier New", Courier, monospace;
-      font-weight: 900;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
+      font-family: "Inter", sans-serif; // Swapped for a cleaner modern font
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      opacity: 0.8;
     }
 
     .controls {
       display: flex;
-      gap: 5px;
+      gap: 8px;
       height: 100%;
       align-items: center;
 
       .ctrl-btn {
-        width: 30px;
-        height: 30px;
-        background: $white;
-        border: 2px solid $black;
+        width: 14px; // Small, circular "Apple-style" or modern dot controls
+        height: 14px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%; // Circular buttons
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         padding: 0;
-        transition: transform 0.1s;
+        transition: all 0.2s ease;
 
-        i,
-        span {
-          color: $black;
-          font-weight: bold;
-          font-size: 1.1rem;
+        // Hide text/icons inside buttons until hover for a "clean" look
+        span,
+        i {
+          font-size: 0;
+          transition: font-size 0.2s;
         }
 
         &:hover {
-          background: $accent-green;
-          transform: translate(-2px, -2px);
-          box-shadow: 2px 2px 0px $black;
+          transform: scale(1.2);
+          background: rgba(255, 255, 255, 0.4);
+
+          span,
+          i {
+            font-size: 0.7rem;
+            color: white;
+          }
         }
 
         &.close:hover {
           background: $accent-red;
-        }
-
-        &:active {
-          transform: translate(0, 0);
-          box-shadow: none;
+          box-shadow: 0 0 10px $accent-red;
         }
       }
     }
@@ -86,15 +92,22 @@ $brutal-shadow: 8px 8px 0px 0px $black;
   .window-content {
     flex-grow: 1;
     overflow: auto;
-    background: rgb(45, 45, 45);
-    padding: 10px;
-    // Hide default scrollbars for that clean look
+    background: rgba(0, 0, 0, 0.3); // Semi-dark content area
+    padding: 15px;
+    height: 90%;
+    // Modern Glass Scrollbar
     &::-webkit-scrollbar {
-      width: 12px;
-      border-left: 4px solid $black;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
     }
     &::-webkit-scrollbar-thumb {
-      background: $black;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
     }
   }
 }
