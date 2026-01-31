@@ -10,3 +10,84 @@
     padding-bottom: 20px;
   }
 }
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.cli-window {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 12px;
+  overflow-y: auto;
+  cursor: text;
+  box-sizing: border-box;
+
+  .terminal-line {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 2px;
+
+    .prompt {
+      color: #00ff00;
+      user-select: none;
+    }
+
+    .text {
+      color: #ccc;
+    }
+
+    // User input lines
+    &.input {
+      .text {
+        color: #fff;
+      }
+    }
+
+    // Command output
+    &.output {
+      .text {
+        color: #aaa;
+      }
+    }
+
+    // Error messages
+    &.error {
+      .text {
+        color: #ff4757;
+      }
+    }
+
+    // Live input line
+    &.input-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+    }
+  }
+
+  // Hidden input styling
+  .terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    caret-color: #00ff00;
+    flex: 1;
+    min-width: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
