@@ -30,7 +30,7 @@ const Bottom = ({ openApp }) => {
           onClick={openAllApps}
           data-label="Open All"
         >
-          <img src="src/assets/icons8-eagle-67.png" alt="start" />
+          <img src="/assets/icons8-eagle-67.png" alt="start" />
         </div>
 
         {/* Search Bar */}
@@ -56,21 +56,21 @@ const Bottom = ({ openApp }) => {
             className="icon-box"
             onClick={() => openApp("github")}
           >
-            <img src="src/assets/github.png" alt="github" />
+            <img src="/assets/github.png" alt="github" />
           </div>
           <div
             className="icon-box"
             onClick={() => openApp("terminal")}
             data-label="terminal"
           >
-            <img src="src/assets/terminal.png" alt="terminal" />
+            <img src="/assets/terminal.png" alt="terminal" />
           </div>
           <div
             className="icon-box mail"
             onClick={() => window.open("mailto:srutidevbarman2002@gmail.com")}
             data-label="mail"
           >
-            <img src="src/assets/mail.png" alt="mail" />
+            <img src="/assets/mail.png" alt="mail" />
           </div>
           <div
             className="icon-box mail"
@@ -81,28 +81,28 @@ const Bottom = ({ openApp }) => {
             }
             data-label="linkdin"
           >
-            <img src="src/assets/icons8-linkedin-48.png" alt="mail" />
+            <img src="/assets/icons8-linkedin-48.png" alt="mail" />
           </div>
           <div
             className="icon-box"
             onClick={() => openApp("spotify")}
             data-label="spotify"
           >
-            <img src="src/assets/spotify.png" alt="spotify" />
+            <img src="/assets/spotify.png" alt="spotify" />
           </div>
           <div
             className="icon-box"
             onClick={() => openApp("notepad")}
             data-label="notepad"
           >
-            <img src="src/assets/notepad.png" alt="notepad" />
+            <img src="/assets/notepad.png" alt="notepad" />
           </div>
           <div
             className="icon-box"
             onClick={() => openApp("resume")}
             data-label="resume"
           >
-            <img src="src/assets/pdf.png" alt="resume" />
+            <img src="/assets/pdf.png" alt="resume" />
           </div>
         </div>
       </div>

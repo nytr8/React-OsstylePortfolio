@@ -11,7 +11,7 @@ const Github = ({ appName, closeApp }) => {
       description: "all in one productivity dashboard",
       liveLink: "https://nytr8.github.io/productivity-dashboard/",
       repoLink: "https://github.com/nytr8/productivity-dashboard.git",
-      image: "src/assets/Screenshot 2026-01-25 160951.png",
+      image: "/assets/Screenshot 2026-01-25 160951.png",
     },
   ];
   return (
