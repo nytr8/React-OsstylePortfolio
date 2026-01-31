@@ -5,7 +5,7 @@ const Resume = ({ appName, closeApp }) => {
   return (
     <Window appName={appName} closeApp={closeApp}>
       <div className="resume-div">
-        <iframe src="public/demo_resume.pdf" frameborder="0"></iframe>
+        <iframe src="/assets/demo_resume.pdf" frameborder="0"></iframe>
       </div>
     </Window>
   );
