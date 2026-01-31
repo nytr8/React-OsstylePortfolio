@@ -73,6 +73,17 @@ const Bottom = ({ openApp }) => {
             <img src="src/assets/mail.png" alt="mail" />
           </div>
           <div
+            className="icon-box mail"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/srutidev-barman-640380233/",
+              )
+            }
+            data-label="linkdin"
+          >
+            <img src="src/assets/icons8-linkedin-48.png" alt="mail" />
+          </div>
+          <div
             className="icon-box"
             onClick={() => openApp("spotify")}
             data-label="spotify"

@@ -10,7 +10,7 @@ const Cli = ({ appName, closeApp }) => {
       usage: "help",
       fn: () => `
 Available Commands:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 help              - Display this help message
 about             - Information about the portfolio
 contact           - Show contact information
@@ -19,7 +19,7 @@ projects          - View portfolio projects
 open <project>    - Open project repository
 echo <text>       - Echo back the provided text
 clear             - Clear the terminal screen
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 Type 'help <command>' for more details.
       `,
     },
@@ -29,7 +29,7 @@ Type 'help <command>' for more details.
       usage: "about",
       fn: () => `
 About This Portfolio
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 Hi, I am Srutidev Barman.
 Currently studying AI Full-Stack Development
 at Sheryians Coding School.
@@ -41,7 +41,7 @@ at Sheryians Coding School.
       usage: "contact",
       fn: () => `
 Contact Information
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 GitHub:    https://github.com/nytr8
 LinkedIn: https://www.linkedin.com/in/srutidev-barman-640380233/
 Email:    srutidevbarman2002@gmail.com
@@ -53,7 +53,7 @@ Email:    srutidevbarman2002@gmail.com
       usage: "skills",
       fn: () => `
 Technical Skills
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━
 Frontend:   React, JavaScript, HTML5, CSS/SCSS
 Backend:    Node.js, Express
 Tools:      Git, Vite, npm
@@ -67,7 +67,7 @@ Other:      REST APIs, Responsive Design
       usage: "projects",
       fn: () => `
 Featured Projects
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━
 1. OS-Style Portfolio
    • Interactive terminal-based portfolio
    • Tech: React, SCSS, Vite
@@ -124,7 +124,7 @@ Available projects: ${Object.keys(projects).join(", ")}`;
           noDefaults
           welcomeMessage={`
 Welcome to my terminal 🚀
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 Type 'help' to see available commands.
 Enjoy exploring!
 `}
